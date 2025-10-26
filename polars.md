@@ -59,6 +59,12 @@ df = df.with_columns(
 )
 ```
 
+replace by dict(a -> dict[a])
+```
+df = df.with_columns(
+    pl.col('Color).replace(dict).alias('Color')
+)
+```
 
 
 
