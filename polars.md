@@ -37,6 +37,14 @@ convert x to missing values
 df = df.fill_null(x)
 ```
 
+show data
+```
+df.head(10)
+df.tail(10)
+```
+
+
+
 
 
 
