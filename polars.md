@@ -43,6 +43,23 @@ df.head(10)
 df.tail(10)
 ```
 
+overwrite data
+```
+df = df.with_columns(
+    pl.when(pl.col('Age').is_null())
+      .then(pl.lit(df['Age'].mean()))
+      .otherwise(pl.col('Age'))
+      .round()
+      .alias('Age'),
+
+    pl.when(pl.col('Embarked').is_null())
+      .then(pl.lit(df['Embarked'].mode()[0]))
+      .otherwise(pl.col('Embarked'))
+      .alias('Embarked')
+)
+```
+
+
 
 
 
