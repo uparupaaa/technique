@@ -16,4 +16,16 @@ copy
 df_copy = df.copy(deep=True)
 ```
 
+rename columns
+```
+df = df.rename(columns={'A': 'col1', 'B': 'col2'})
+```
+
+select data which dtype is float
+```
+float_cols = df.select_dtypes(include=['float'])
+```
+
+
+
 
