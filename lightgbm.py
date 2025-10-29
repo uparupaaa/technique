@@ -25,3 +25,20 @@ print(f'logloss: {score:.4f}')
 # 予測
 pred = model.predict(test_x)
 
+
+
+
+#regression
+params = {
+    'objective': 'regression',  # uses RMSE loss internally (same as L2)
+    'metric': 'rmse',
+    'learning_rate': 0.05,
+    'num_leaves': 31,
+}
+
+model = lgb.train(
+    params,
+    train_set=lgb.Dataset(X_train, label=y_train),
+    valid_sets=[lgb.Dataset(X_valid, label=y_valid)],
+    verbose_eval=100
+)
