@@ -66,6 +66,19 @@ df = df.with_columns(
 )
 ```
 
+add index
+```
+df = df.with_row_count('index')
+```
+
+drop columns
+```
+df = df.drop('index')
+```
+
+
+
+
 
 
 
