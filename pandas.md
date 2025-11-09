@@ -41,5 +41,19 @@ merged = pd.concat([df1, df2, ...], axis=1)
 if axis=0, concat direction is 
 ```
 
+append row
+```
+new_row = pd.DataFrame([4, 5, 6], columns=['a', 'b', 'c'])
+X = pd.concat([X, new_row], ignore_index=True)
+```
+
+create dataframe
+```
+row = 2D list or a value
+df = pd.DataFrame(row, index=range(100), columns=cols)
+```
+
+
+
 
 
