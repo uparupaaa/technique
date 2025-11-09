@@ -53,6 +53,15 @@ row = 2D list or a value
 df = pd.DataFrame(row, index=range(100), columns=cols)
 ```
 
+drop data
+```
+df = df.drop([col1, col2], axis=1)
+df.drop(col, axis=1, inplace=True)
+df = df.drop([row_idx1, row_idx2])
+```
+
+
+
 
 
 
